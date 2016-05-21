@@ -1,0 +1,36 @@
+Ideas for last project:
+
+Directory for keeping track of WDI Classmates.
+
+
+Features
+
+//////////////////////////////////////////
+///////////////// Bronze /////////////////
+//////////////////////////////////////////
+- Users should see be able to see input fields that can input information.
+- Users should be able to CRUD their information in each available field.
+
+//////////////////////////////////////////
+///////////////// Silver /////////////////
+//////////////////////////////////////////
+- Users should be able to use
+-
+
+//////////////////////////////////////////
+////////////////// Gold //////////////////
+//////////////////////////////////////////
+- Users should be able to
+-
+
+
+
+Application building process:
+http://guides.rubyonrails.org/getting_started.html
+
+Step 1. gem install rails
+2. rails new WDI_WhereAreTheyNow -d postgresql
+3. cd WDI_WhereAreTheyNow
+4. rails s
+5. In Chrome, go to http://localhost:3000
+6.
