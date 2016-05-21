@@ -28,9 +28,39 @@ Features
 Application building process:
 http://guides.rubyonrails.org/getting_started.html
 
+**** Generate Application ****
+
 Step 1. gem install rails
 2. rails new WDI_WhereAreTheyNow -d postgresql
 3. cd WDI_WhereAreTheyNow
-4. rails s
-5. In Chrome, go to http://localhost:3000
-6.
+
+
+**** Initialize And Push Changes To Remote Repo ****
+
+4. git init
+5. git add .
+    # Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+6. git commit -m "Initial commit"
+    # Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+7. git remote add origin git@github.com:mvaden/Project_4.git
+    # Adds local repo to remote origin. Pushes committed files to that remote repository URL.
+8. git push -u origin master
+    # Pushes the changes in your local repository up to the remote repository you specified as the origin.
+
+
+**** Getting Rails To Say "Hello" ****
+
+9.  bundle install
+    # Loads & sets up the local dependencies.
+10. rake db:create
+    #
+11. rake db:migrate
+12. rake db:seed
+  12a.  rake db:create db:migrate: db:seed
+13. rails s
+14. In Chrome, goto http://localhost:3000
+15. rails g controller classmates index
+    # Generates a controller called classmates with an index.html.erb.
+16. In routes.rb, set line 2 to 'get 'classmates/index'. Uncomment 'root welcome#index'
+    # Creates route, connecting the view to the controller.
+17. Run rake routes.
