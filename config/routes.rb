@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'classmates/index'
 
-  # You can have the root of your site routed with "root"
+  resources :classmates
+
   root 'welcome#index'
+  get 'classmates/index'
+  # You can have the root of your site routed with "root"
 end
 
 

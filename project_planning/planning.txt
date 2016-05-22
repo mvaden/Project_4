@@ -1,30 +1,3 @@
-Ideas for last project:
-
-Directory for keeping track of WDI Classmates.
-
-
-Features
-
-//////////////////////////////////////////
-///////////////// Bronze /////////////////
-//////////////////////////////////////////
-- Users should see be able to see input fields that can input information.
-- Users should be able to CRUD their information in each available field.
-
-//////////////////////////////////////////
-///////////////// Silver /////////////////
-//////////////////////////////////////////
-- Users should be able to use
--
-
-//////////////////////////////////////////
-////////////////// Gold //////////////////
-//////////////////////////////////////////
-- Users should be able to
--
-
-
-
 Application building process:
 http://guides.rubyonrails.org/getting_started.html
 
@@ -40,7 +13,7 @@ Step 1. gem install rails
 4. git init
 5. git add .
     # Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
-6. git commit -m "Initial commit"
+6. Commit to Git: "Initial commit"
     # Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
 7. git remote add origin git@github.com:mvaden/Project_4.git
     # Adds local repo to remote origin. Pushes committed files to that remote repository URL.
@@ -64,3 +37,4 @@ Step 1. gem install rails
 16. In routes.rb, set line 2 to 'get 'classmates/index'. Uncomment 'root welcome#index'
     # Creates route, connecting the view to the controller.
 17. Run rake routes.
+18. Commit to Git: "Created a route, connecting view to controller. Server says 'Hello World'."
