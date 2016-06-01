@@ -11,6 +11,10 @@ class ClassmatesController < ApplicationController
     @classmate = Classmate.new
   end
 
+  def edit
+    @classmate = Classmate.find(params[:id])
+  end
+
   def create
     @classmate = Classmate.new(classmate_params)
 
@@ -20,6 +24,17 @@ class ClassmatesController < ApplicationController
       render 'new'
     end
   end
+
+  def update
+    @classmate = Classmate.find(params[:id])
+
+    if @classmate.update(classmate_params)
+      redirect_to @classmate
+    else
+      render 'edit'
+    end
+  end
+  
 
   private
     def classmate_params

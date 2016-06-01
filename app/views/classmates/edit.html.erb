@@ -1,0 +1,45 @@
+<h1>Edit Classmate</h1>
+
+<%= form_for :classmate, url: classmate_path(@classmate), method: :patch do |f| %>
+
+  <% if @classmate.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@classmate.errors.count, "error") %> prohibited
+        this profile from being saved:
+      </h2>
+      <ul>
+        <% @classmate.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label :portfolio_url %><br>
+    <%= f.text_field :portfolio_url %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', classmates_path %>

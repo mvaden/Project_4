@@ -18,6 +18,8 @@
       <td><%= classmate.last_name %></td>
       <td><%= classmate.portfolio_url %></td>
       <td><%= classmate.location %></td>
+      <td><%= link_to 'Show', classmate_path(classmate) %></td>
+      <td><%= link_to 'Edit', edit_classmate_path(classmate) %></td>
     </tr>
   <% end %>
 </table>

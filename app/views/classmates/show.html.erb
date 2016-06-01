@@ -1,3 +1,5 @@
+<h1>Showing This Classmate</h1>
+
 <p>
   <strong>First Name:</strong>
   <%= @classmate.first_name %>
@@ -18,4 +20,5 @@
   <%= @classmate.location %>
 </p>
 
+<%= link_to 'Edit', edit_classmate_path(@classmate) %>
 <%= link_to 'Back', classmates_path %>
