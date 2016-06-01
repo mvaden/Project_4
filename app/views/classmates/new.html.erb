@@ -12,16 +12,19 @@
   </p>
 
   <p>
-    <%= f.label :current_city %><br>
-    <%= f.text_field :current_city %>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
   </p>
 
   <p>
-    <%= f.label :portfolio_URL %><br>
-    <%= f.text_field :portfolio_URL %>
+    <%= f.label :portfolio_url %><br>
+    <%= f.text_field :portfolio_url %>
   </p>
 
   <p>
     <%= f.submit %>
   </p>
+
 <% end %>
+
+<%= link_to 'Return to previous page', classmates_path %>

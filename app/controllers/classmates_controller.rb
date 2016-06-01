@@ -8,13 +8,17 @@ class ClassmatesController < ApplicationController
   end
 
   def new
+    @classmate = Classmate.new
   end
 
   def create
     @classmate = Classmate.new(classmate_params)
 
-    @classmate.save
-    redirect_to @classmate
+    if @classmate.save
+      redirect_to @classmate
+    else
+      render 'new'
+    end
   end
 
   private
