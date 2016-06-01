@@ -1,4 +1,8 @@
 class ClassmatesController < ApplicationController
+  def index
+    @classmate = Classmate.all
+  end
+
   def show
     @classmate = Classmate.find(params[:id])
   end
@@ -17,5 +21,5 @@ class ClassmatesController < ApplicationController
     def classmate_params
       params.require(:classmate).permit(:first_name, :last_name, :portfolio_url, :location)
     end
-    
+
   end
