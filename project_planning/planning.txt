@@ -32,9 +32,14 @@ Step 1. gem install rails
   12a.  rake db:create db:migrate: db:seed
 13. rails s
 14. In Chrome, goto http://localhost:3000
-15. rails g controller classmates index
+15. rails g controller classmates
     # Generates a controller called classmates with an index.html.erb.
 16. In routes.rb, set line 2 to 'get 'classmates/index'. Uncomment 'root welcome#index'
     # Creates route, connecting the view to the controller.
 17. Run rake routes.
 18. Commit to Git: "Created a route, connecting view to controller. Server says 'Hello World'."
+
+
+**** [C] RUD ****
+
+19. rails g controller
