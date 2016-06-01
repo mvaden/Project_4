@@ -3,6 +3,13 @@ class ClassmatesController < ApplicationController
   end
 
   def create
-    render plain: params[:classmate].inspect
+     @classmate = Classmate.new(classmate_params)
+
+     @classmate.save
+     redirect_to @classmate
   end
-end
+
+  private
+    def classmate_params
+      params.require(:classmate).permit(:first_name, :last_name, :portfolio_url, :location)
+    end
