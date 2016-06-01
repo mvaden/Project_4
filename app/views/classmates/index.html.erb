@@ -2,14 +2,13 @@
 <!-- <p>Find me in app/views/classmates/index.html.erb</p> -->
 <%= link_to 'Where Are They Now?', controller: 'classmates' %>
 <%= link_to 'New classmate', new_classmate_path %>
-
-
 <table>
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Portfolio</th>
     <th>Location</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @classmate.each do |classmate| %>
@@ -20,6 +19,9 @@
       <td><%= classmate.location %></td>
       <td><%= link_to 'Show', classmate_path(classmate) %></td>
       <td><%= link_to 'Edit', edit_classmate_path(classmate) %></td>
+      <td><%= link_to 'Destroy', classmate_path(classmate),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to delete this classmate profile?' } %></td>
     </tr>
   <% end %>
 </table>

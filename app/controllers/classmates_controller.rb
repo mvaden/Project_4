@@ -34,7 +34,13 @@ class ClassmatesController < ApplicationController
       render 'edit'
     end
   end
-  
+
+  def destroy
+    @classmate = Classmate.find(params[:id])
+    @classmate.destroy
+
+    redirect_to classmates_path
+  end
 
   private
     def classmate_params
