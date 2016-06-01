@@ -1,1 +1,27 @@
 <h1>New Classmate Profile</h1>
+
+<%= form_for :classmate do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :current_city %><br>
+    <%= f.text_field :current_city %>
+  </p>
+
+  <p>
+    <%= f.label :portfolio_URL %><br>
+    <%= f.text_field :portfolio_URL %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
