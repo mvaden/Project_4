@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'welcome#index'
+  # root 'welcome#index'
   get 'classmates/index'
   # You can have the root of your site routed with "root"
 end
