@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :classmates
+  resources :classmates do
+    resources :comments
+  end
 
   root 'welcome#index'
   get 'classmates/index'
