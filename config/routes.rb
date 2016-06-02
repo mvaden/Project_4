@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   # root 'welcome#index'
-  get 'classmates/index'
+  root 'classmates#index'
   # You can have the root of your site routed with "root"
 end
 
