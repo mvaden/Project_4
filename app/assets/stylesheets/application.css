@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  background-color: rgb(183, 255, 255);
+  margin: 30px
+}
+
+body {
+  text-align: center;
+  max-width: 50em;
+}
+
+th {
+  margin: 0px, 10, 0, 10;
+}
