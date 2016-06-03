@@ -14,16 +14,21 @@
  *= require_self
  */
 
+/* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 * {
-  background-color: rgb(183, 255, 255);
-  margin: 30px
+  margin: 35px;
 }
 
 body {
+  background-color: rgb(183, 255, 255);
   text-align: center;
   max-width: 50em;
 }
 
-th {
-  margin: 0px, 10, 0, 10;
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url();
 }
