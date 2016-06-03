@@ -20,6 +20,19 @@
   <%= @classmate.location %>
 </p>
 
+<h2>Comments</h2>
+<% @classmate.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
 <h2>Add a comment:</h2>
 <%= form_for([@classmate, @classmate.comments.build]) do |f| %>
   <p>
